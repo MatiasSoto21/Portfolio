@@ -4,7 +4,7 @@ import React from 'react'
 const Sidebar = () => {
     return (
         <div>
-            <nav class="flex flex-col bg-zinc-900 w-64 h-screen px-4 tex-gray-900 border border-gray-700">
+            <nav class="flex flex-col bg-zinc-900 w-28 h-screen px-2 tex-gray-900 border border-gray-700 md:w-48 md:px-4 lg:w-64 lg:px-4">  {/* w-64 */}
                 <div class="flex flex-wrap mt-8 justify-center">
                     <div class=" flex justify-center w-1/2 mb-4 ">
                         <span class="font-semibold text-xl text-white">Matias Soto</span>
@@ -16,10 +16,10 @@ const Sidebar = () => {
                         />
                     </div>
                 </div>
-                <div class="mt-10 mb-4">
-                    <ul class="ml-4">
+                <div class="mt-5 mb-4 md:mt-8 lg:mt-10">
+                    <ul class="md:ml-2 lg:ml-4">
                         <Link href="/">
-                            <li class="mb-2 px-4 py-4 text-gray-100 flex flex-row  border-gray-300 hover:text-black   hover:bg-gray-300  hover:font-bold rounded rounded-lg">
+                            <li class="mb-2 py-4 text-gray-100 flex flex-row  border-gray-300 hover:text-black   hover:bg-gray-300  hover:font-bold rounded rounded-lg md:px-4 lg:px-4">
                                 <span>
                                     <svg class="fill-current h-5 w-5 " viewBox="0 0 24 24">
                                         <path
@@ -29,11 +29,11 @@ const Sidebar = () => {
                                         ></path>
                                     </svg>
                                 </span>
-                                <span class="ml-2">Matias</span>
+                                <span class="ml-2 text-sm lg:text-base">Matias</span>
                             </li>
                         </Link>
                         <Link href="/Aboutme">
-                            <li class="mb-2 px-4 py-4 text-gray-100 flex flex-row  border-gray-300 hover:text-black   hover:bg-gray-300  hover:font-bold rounded rounded-lg">
+                            <li class="mb-2 py-4 text-gray-100 flex flex-row  border-gray-300 hover:text-black   hover:bg-gray-300  hover:font-bold rounded rounded-lg md:px-4 lg:px-4">
                                 <span>
                                     <svg
                                         class="fill-current h-5 w-5 "
@@ -54,11 +54,11 @@ const Sidebar = () => {
                                     </svg>
                                 </span>
 
-                                <span class="ml-2">About Me</span>
+                                <span class="ml-2 text-sm lg:text-base">About Me</span>
                             </li>
                         </Link>
                         <Link href="/Proyects">
-                            <li class="mb-2 px-4 py-4 text-gray-100 flex flex-row  border-gray-300 hover:text-black   hover:bg-gray-300  hover:font-bold rounded rounded-lg">
+                            <li class="mb-2 py-4 text-gray-100 flex flex-row  border-gray-300 hover:text-black   hover:bg-gray-300  hover:font-bold rounded rounded-lg md:px-4 lg:px-4">
                                 <span>
                                     <svg class="fill-current h-5 w-5 " viewBox="0 0 20 18">
                                         <path
@@ -68,23 +68,23 @@ const Sidebar = () => {
                                     </svg>
                                 </span>
 
-                                <span class="ml-2">Proyects</span>
+                                <span class="ml-2 text-sm lg:text-base">Proyects</span>
                             </li>
                         </Link>
                         <Link href="/Education">
-                            <li class="mb-2 px-4 py-4 text-gray-100 flex flex-row  border-gray-300 hover:text-black   hover:bg-gray-300  hover:font-bold rounded rounded-lg">
+                            <li class="mb-2 py-4 text-gray-100 flex flex-row  border-gray-300 hover:text-black   hover:bg-gray-300  hover:font-bold rounded rounded-lg md:px-4 lg:px-4">
                                 <span>
-                                    <svg class="fill-current h-5 w-5" viewBox="0 0 16 16">
+                                    <svg class="fill-current h-4 w-4" viewBox="0 0 16 16">
                                         <path
                                             d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"
                                         ></path>
                                     </svg>
                                 </span>
-                                <span class="ml-2">Education</span>
+                                <span class="ml-2 text-sm lg:text-base">Education</span>
                             </li>
                         </Link>
                         <Link href="/Skills">
-                            <li class="mb-2 px-4 py-4 text-gray-100 flex flex-row  border-gray-300 hover:text-black   hover:bg-gray-300  hover:font-bold rounded rounded-lg">
+                            <li class="py-4 text-gray-100 flex flex-row  border-gray-300 hover:text-black   hover:bg-gray-300  hover:font-bold rounded rounded-lg md:px-4 lg:px-4 lg:mb-2">
                                 <span>
                                     <svg class="fill-current h-5 w-5 " viewBox="0 0 24 24">
                                         <path
@@ -94,11 +94,11 @@ const Sidebar = () => {
                                         ></path>
                                     </svg>
                                 </span>
-                                <span class="ml-2">Skills</span>
+                                <span class="ml-2 text-sm lg:text-base">Skills</span>
                             </li>
                         </Link>
                         <Link href="/Contact">
-                            <li class="mb-2 px-4 py-4 text-gray-100 flex flex-row  border-gray-300 hover:text-black   hover:bg-gray-300  hover:font-bold rounded rounded-lg">
+                            <li class="py-4 text-gray-100 flex flex-row  border-gray-300 hover:text-black   hover:bg-gray-300  hover:font-bold rounded rounded-lg md:px-4 lg:px-4 lg:mb-2">
                                 <span>
                                     <svg
                                         class="fill-current h-5 w-5 "
@@ -114,7 +114,7 @@ const Sidebar = () => {
                                         />
                                     </svg>
                                 </span>
-                                <span class="ml-2">Contact</span>
+                                <span class="ml-2 text-sm lg:text-base">Contact</span>
                             </li>
                         </Link>
                     </ul>
