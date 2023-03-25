@@ -12,7 +12,7 @@ const Skills = () => {
         <title>Matias Soto Portfolio</title>
       </Head>
       <Sidebar></Sidebar>
-      <div class="flex flex-col ml-32  md:mt-8 md:ml-52  lg:mt-40 lg:ml-72">
+      <div class="flex flex-col ml-24  md:mt-8 md:ml-52  lg:mt-40 lg:ml-72">
         <h1 class="text-white text-2xl font-mono md:text-4xl lg:text-6xl">My Skill Set</h1>
         <br></br>
         <h2 class="text-white font-mono md:mt-7 md:text-xl lg:mt-14 lg:text-3xl">Programming Languages</h2>

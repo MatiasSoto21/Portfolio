@@ -13,7 +13,7 @@ const Proyects = () => {
         <title>Matias Soto Portfolio</title>
       </Head>
       <Sidebar></Sidebar>
-      <section className="mt-1 ml-28 md:mx-20 md:mt-8 md:ml-52 lg:mx-40 lg:mt-40 lg:ml-72">
+      <section className="mt-1 ml-20 md:mx-20 md:mt-8 md:ml-52 lg:mx-40 lg:mt-40 lg:ml-72">
         <div>
           <h1 className='ml-3 text-white text-xl font-mono md:text-4xl lg:text-6xl'>Lastest Proyects</h1>
 
