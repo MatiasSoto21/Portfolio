@@ -7,69 +7,63 @@ import folk1 from '../public/folk1.png'
 import folk2 from '../public/folk2.png'
 import smite from '../public/smite.png'
 import smite1 from '../public/smite1.png'
+import arg from '../public/arg.png'
 
 
 
 const Aboutme = () => {
     return (
-        <div className="bg-cyan-900 flex flex-row min-h-screen">
+        <div className="bg-cyan-900 flex flex-col min-h-screen">
             <Head>
                 <title>Matias Soto Portfolio</title>
             </Head>
             <Sidebar></Sidebar>
-            <div class="ml-20 mt-14 w-48">
 
-                <div id="default-carousel" class="relative" data-carousel="static">
+            <div className='ml-20 text-white mt-8 md:ml-48 lg:ml-72'>
+                <div className='flex flex-row justify-center'>
 
-                    <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
-
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
-                            <Image src={smite1} class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="..." />
-                        </div>
-
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <Image src={folk2} class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="..." />
-                        </div>
-
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <Image src={folk1} class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="..." />
-                        </div>
-
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <Image src={smite} class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="..." />
-                        </div>
-
-                    </div>
-
-                    <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
-                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-                    </div>
-
-                    <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
-                        <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                            <span class="hidden">Previous</span>
-                        </span>
-                    </button>
-                    <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
-                        <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                            <span class="hidden">Next</span>
-                        </span>
-                    </button>
+                    <h1 className='text-2xl md:text-4xl lg:text-6xl'>About Me 🧉</h1> <Image className='md:w-16 lg:w-24' src={arg} width={50} />
                 </div>
-
-                {/* <p class="mt-5">This carousel slider component is part of a larger, open-source library of Tailwind CSS components. Learn
-                    more
-                    by going to the official <a class="text-blue-600 hover:underline"
-                        href="https://flowbite.com/docs/getting-started/introduction/" target="_blank">Flowbite Documentation</a>.
-                </p> */}
-                <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+                <p className='mt-4 text-xs font-medium text-center px-5 md:text-base lg:text-lg lg:mt-10 max-w-4xl mx-auto'>I'm from Argentina and I'm 22 years old, At the beginning of 2022 I decided to start my path to become a Web Developer. While and before that, I spent a lot of time being a professional smite player and dancing as a hobby. Here I leave you some images as a fun fact about me.</p>
             </div>
+            <div className='flex justify-center'>  
+
+            
+            <div class="carousel w-60 ml-20 mt-6 md:mt-10 md:w-96 md:ml-48 lg:w-1/3">
+                <div id="slide1" class="carousel-item relative w-full h-64 flex justify-center md:h-96 lg:h-full">
+                    <Image src={smite1} class="w-full h-60 rounded-2xl md:h-96 lg:h-4/5" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" class="btn btn-xs btn-circle md:btn-sm lg:btn-md">❮</a>
+                        <a href="#slide2" class="btn btn-xs btn-circle md:btn-sm lg:btn-md">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full h-60 flex justify-center md:h-96 lg:h-full">
+                    <Image src={folk2} class="w-full h-64 rounded-2xl md:h-96 lg:h-4/5" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-xs btn-circle md:btn-sm lg:btn-md">❮</a>
+                        <a href="#slide3" class="btn btn-xs btn-circle md:btn-sm lg:btn-md">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full h-60 flex justify-center md:h-96 lg:h-full">
+                    <Image src={smite} class="w-full rounded-2xl md:h-96 lg:h-4/5" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-xs btn-circle md:btn-sm lg:btn-md">❮</a>
+                        <a href="#slide4" class="btn btn-xs btn-circle md:btn-sm lg:btn-md">❯</a>
+                    </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full h-60 flex justify-center md:h-96 lg:h-full">
+                    <Image src={folk1} class="w-full h-64 rounded-2xl md:h-96 lg:h-4/5" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-xs btn-circle md:btn-sm lg:btn-md">❮</a>
+                        <a href="#slide1" class="btn btn-xs btn-circle md:btn-sm lg:btn-md">❯</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div className='ml-20 mt-4 flex justify-center text-white md:ml-48 lg:-mt-20 lg:mb-20'>
+                <h1 className='font-medium text-sm md:text-lg lg:text-3xl'>I love Art and Videogames too! :) </h1>
+            </div>
+
         </div>
     )
 }
