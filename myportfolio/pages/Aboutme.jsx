@@ -22,40 +22,40 @@ const Aboutme = () => {
             <div className='ml-20 text-white mt-8 md:ml-48 lg:ml-72'>
                 <div className='flex flex-row justify-center'>
 
-                    <h1 className='text-2xl md:text-4xl lg:text-6xl'>About Me 🧉</h1> <Image className='md:w-16 lg:w-24' src={arg} width={50} />
+                    <h1 className='text-2xl md:text-4xl lg:text-6xl'>About Me 🧉</h1> <Image className='md:w-16 lg:w-24' src={arg} alt="ArgFlag" width={50} />
                 </div>
                 <p className='mt-4 text-xs font-medium text-center px-5 md:text-base lg:text-lg lg:mt-10 max-w-4xl mx-auto'>I'm from Argentina and I'm 22 years old, At the beginning of 2022 I decided to start my path to become a Web Developer. While and before that, I spent a lot of time being a professional smite player and dancing as a hobby. Here I leave you some images as a fun fact about me.</p>
             </div>
             <div className='flex justify-center'>  
 
             
-            <div class="carousel w-60 ml-20 mt-6 md:mt-10 md:w-96 md:ml-48 lg:w-1/3">
-                <div id="slide1" class="carousel-item relative w-full h-64 flex justify-center md:h-96 lg:h-full">
-                    <Image src={smite1} class="w-full h-60 rounded-2xl md:h-96 lg:h-4/5" />
-                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide4" class="btn btn-xs btn-circle md:btn-sm lg:btn-md">❮</a>
-                        <a href="#slide2" class="btn btn-xs btn-circle md:btn-sm lg:btn-md">❯</a>
+            <div className="carousel w-60 ml-20 mt-6 md:mt-10 md:w-96 md:ml-48 lg:w-1/3">
+                <div id="slide1" className="carousel-item relative w-full h-64 flex justify-center md:h-96 lg:h-full">
+                    <Image priority src={smite1} alt="Pic1" className="w-full h-60 rounded-2xl md:h-96 lg:h-4/5" />
+                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" className="btn btn-xs btn-circle md:btn-sm lg:btn-md">❮</a>
+                        <a href="#slide2" className="btn btn-xs btn-circle md:btn-sm lg:btn-md">❯</a>
                     </div>
                 </div>
-                <div id="slide2" class="carousel-item relative w-full h-60 flex justify-center md:h-96 lg:h-full">
-                    <Image src={folk2} class="w-full h-64 rounded-2xl md:h-96 lg:h-4/5" />
-                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide1" class="btn btn-xs btn-circle md:btn-sm lg:btn-md">❮</a>
-                        <a href="#slide3" class="btn btn-xs btn-circle md:btn-sm lg:btn-md">❯</a>
+                <div id="slide2" className="carousel-item relative w-full h-60 flex justify-center md:h-96 lg:h-full">
+                    <Image priority src={folk2} alt="Pic2" className="w-full h-64 rounded-2xl md:h-96 lg:h-4/5" />
+                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" className="btn btn-xs btn-circle md:btn-sm lg:btn-md">❮</a>
+                        <a href="#slide3" className="btn btn-xs btn-circle md:btn-sm lg:btn-md">❯</a>
                     </div>
                 </div>
-                <div id="slide3" class="carousel-item relative w-full h-60 flex justify-center md:h-96 lg:h-full">
-                    <Image src={smite} class="w-full rounded-2xl md:h-96 lg:h-4/5" />
-                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide2" class="btn btn-xs btn-circle md:btn-sm lg:btn-md">❮</a>
-                        <a href="#slide4" class="btn btn-xs btn-circle md:btn-sm lg:btn-md">❯</a>
+                <div id="slide3" className="carousel-item relative w-full h-60 flex justify-center md:h-96 lg:h-full">
+                    <Image priority src={smite} alt="Pic3" className="w-full rounded-2xl md:h-96 lg:h-4/5" />
+                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" className="btn btn-xs btn-circle md:btn-sm lg:btn-md">❮</a>
+                        <a href="#slide4" className="btn btn-xs btn-circle md:btn-sm lg:btn-md">❯</a>
                     </div>
                 </div>
-                <div id="slide4" class="carousel-item relative w-full h-60 flex justify-center md:h-96 lg:h-full">
-                    <Image src={folk1} class="w-full h-64 rounded-2xl md:h-96 lg:h-4/5" />
-                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide3" class="btn btn-xs btn-circle md:btn-sm lg:btn-md">❮</a>
-                        <a href="#slide1" class="btn btn-xs btn-circle md:btn-sm lg:btn-md">❯</a>
+                <div id="slide4" className="carousel-item relative w-full h-60 flex justify-center md:h-96 lg:h-full">
+                    <Image priority src={folk1} alt="Pic4" className="w-full h-64 rounded-2xl md:h-96 lg:h-4/5" />
+                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" className="btn btn-xs btn-circle md:btn-sm lg:btn-md">❮</a>
+                        <a href="#slide1" className="btn btn-xs btn-circle md:btn-sm lg:btn-md">❯</a>
                     </div>
                 </div>
             </div>

@@ -21,17 +21,17 @@ const Proyects = () => {
             <div className='flex flex-col mx-2 mb-4 shadow-2xl shadow-black rounded-2xl md:mt-10 md:px-2  bg-cyan-800'>
               <div className='text-white text-center flex flex-col items-center'>
                 <h3 className='text-lg font-medium mb-1 md:text-xl mt-2 lg:text-3xl'>PokeFind App</h3>
-                <Image src={pokefind} className="w-24 md:w-36 lg:w-64" />
+                <Image priority src={pokefind} alt="pokeAppImg" className="w-24 md:w-36 lg:w-64" />
                 <p className='text-xs py-2 max-w-xs mx-auto md:text-base md:font-normal lg:text-lg lg:font-medium'>Wiki Web App</p>
                 <p className='text-xs py-2 max-w-xs mx-auto md:text-base md:font-normal lg:text-lg lg:font-medium'>•Search-Filtering-Ordering-Creation.</p>
                 <h4 className='-mt-1 mb-2'>Made with</h4>
               </div>
-              <div class="-mt-4 flex flex-wrap justify-center">
-                <img class="mt-3 md:mt-5 lg:mt-5" src='https://img.shields.io/badge/-Javascript-grey?logo=javascript&logoColor=yellow&style=plastic'
+              <div className="-mt-4 flex flex-wrap justify-center">
+                <img className="mt-3 md:mt-5 lg:mt-5" src='https://img.shields.io/badge/-Javascript-grey?logo=javascript&logoColor=yellow&style=plastic'
                   alt='javascript'
                   width="92px"
                 />
-                <img class="mt-3 mx-3 md:mt-5 lg:mt-5" src='https://img.shields.io/badge/-HTML-red?logo=html5&logoColor=white&style=plastic'
+                <img className="mt-3 mx-3 md:mt-5 lg:mt-5" src='https://img.shields.io/badge/-HTML-red?logo=html5&logoColor=white&style=plastic'
                   alt='html5'
                   width="65px"
                 />
@@ -39,7 +39,7 @@ const Proyects = () => {
                   alt='css3'
                   width="60px"
                 />
-                <img class="mt-3 md:mt-5 lg:mt-5" src='https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=0064cf&style=plastic'
+                <img className="mt-3 md:mt-5 lg:mt-5" src='https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=0064cf&style=plastic'
                   alt='reactjs'
                   width="60px"
                 />
@@ -58,17 +58,17 @@ const Proyects = () => {
             <div className='flex flex-col mx-2 mb-4 shadow-2xl shadow-black rounded-2xl md:mt-10 md:px-2  bg-cyan-800'>
               <div className='text-white text-center flex flex-col items-center'>
                 <h3 className='text-lg font-medium mb-1 md:tex-xl mt-2 lg:text-3xl'>Console.Game</h3>
-                <Image src={consolegame} className="w-16 md:w-28 lg:w-44" />
+                <Image priority src={consolegame} alt="consolegameApp" className="w-16 md:w-28 lg:w-44" />
                 <p className='text-xs py-2 max-w-xs mx-auto md:text-base md:font-normal lg:text-lg lg:font-medium'>E-commerce Android</p>
                 <p className='text-xs py-2 max-w-xs mx-auto md:text-base md:font-normal lg:text-lg lg:font-medium'>•Auth0-Shopping cart-Notifications-etc.</p>
                 <h4 className='-mt-1 mb-2'>Made with</h4>
               </div>
-              <div class="-mt-4 flex flex-wrap justify-center">
-                <img class="mt-3 md:mt-5 lg:mt-5" src='https://img.shields.io/badge/-Javascript-grey?logo=javascript&logoColor=yellow&style=plastic'
+              <div className="-mt-4 flex flex-wrap justify-center">
+                <img className="mt-3 md:mt-5 lg:mt-5" src='https://img.shields.io/badge/-Javascript-grey?logo=javascript&logoColor=yellow&style=plastic'
                   alt='javascript'
                   width="92px"
                 />
-                <img class="mt-3 mx-3 md:mt-5 lg:mt-5" src='https://img.shields.io/badge/-HTML-red?logo=html5&logoColor=white&style=plastic'
+                <img className="mt-3 mx-3 md:mt-5 lg:mt-5" src='https://img.shields.io/badge/-HTML-red?logo=html5&logoColor=white&style=plastic'
                   alt='html5'
                   width="65px"
                 />
@@ -76,7 +76,7 @@ const Proyects = () => {
                   alt='css3'
                   width="60px"
                 />
-                <img class="mt-3 md:mt-5 lg:mt-5" src='https://img.shields.io/badge/-ReactNative-61DAFB?logo=reactnative&logoColor=0064cf&style=plastic'
+                <img className="mt-3 md:mt-5 lg:mt-5" src='https://img.shields.io/badge/-ReactNative-61DAFB?logo=reactnative&logoColor=0064cf&style=plastic'
                   alt='reactjs'
                   width="60px"
                 />
