@@ -2,21 +2,34 @@ import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
 import Sidebar from './components/Sidebar'
 import Head from 'next/head';
+import { AiOutlineInstagram, AiFillFacebook } from "react-icons/ai";
+import { IoLogoWhatsapp } from "react-icons/io";
+import Swal from 'sweetalert2'
 
 const Contact = () => {
 
-  const [input, setInput] = useState({
-    name: "",
-    email: "",
-    message: ""
-  })
-
   const form = useRef();
+  const inputname = useRef();
+  const inputmail = useRef();
+  const inputmessage = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_3jcphxc', 'template_o1si5n9', form.current, 'atwDnmKut-t4_4MyT')
-    form.current.reset();
+
+    if (inputname.current.value.length > 0 && inputmail.current.value.length > 0 && inputmessage.current.value.length > 0) {
+
+      emailjs.sendForm('service_3jcphxc', 'template_o1si5n9', form.current, 'atwDnmKut-t4_4MyT')
+      form.current.reset();
+      Swal.fire({
+        toast: true,
+        position: 'top-end',
+        icon: 'success',
+        title: 'Message Sent!',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      })
+    }
   };
 
   return (
@@ -25,7 +38,7 @@ const Contact = () => {
         <title>Matias Soto Portfolio</title>
       </Head>
       <Sidebar></Sidebar>
-      <div className="ml-20 mt-4  md:mt-8 md:ml-52  lg:mt-40 lg:ml-72">
+      <div className="ml-20 mt-4 md:mt-8 md:ml-52  lg:mt-40 lg:ml-72">
         <div className='flex flex-row justify-center'>
 
           <h1 className='text-white text-2xl font-mono md:text-4xl lg:text-6xl'>Contact Me!</h1>
@@ -43,6 +56,7 @@ const Contact = () => {
                   Your Name
                 </label>
                 <input
+                  ref={inputname}
                   type="text"
                   name="user_name"
                   id="name"
@@ -58,6 +72,7 @@ const Contact = () => {
                   Email Address
                 </label>
                 <input
+                  ref={inputmail}
                   type="email"
                   name="user_email"
                   id="email"
@@ -74,6 +89,7 @@ const Contact = () => {
                   Message
                 </label>
                 <textarea
+                  ref={inputmessage}
                   rows="4"
                   name="message"
                   id="message"
@@ -92,8 +108,19 @@ const Contact = () => {
           </div>
         </div>
 
-
+        <div className='-ml-2 mt-6'>
+          <footer className="footer footer-center py-2 text-base-content rounded">
+            <div>
+              <div className="grid grid-flow-col gap-12">
+                <a rel="noreferrer" href='https://www.instagram.com/matisoto15/' target="_blank" className="text-[#F77737]"><AiOutlineInstagram className='text-2xl md:text-3xl lg:text-4xl'></AiOutlineInstagram></a>
+                <a rel="noreferrer" href='https://wa.me/542615696602' target="_blank" className=" text-[#00bb2d]"><IoLogoWhatsapp className='text-2xl md:text-3xl lg:text-4xl'></IoLogoWhatsapp></a>
+                <a rel="noreferrer" href='https://www.facebook.com/matias.sotocdgcat' target="_blank" className=" text-sky-600"><AiFillFacebook className='text-2xl md:text-3xl lg:text-4xl'></AiFillFacebook></a>
+              </div>
+            </div>
+          </footer>
+        </div>
       </div>
+
     </div>
   )
 }
