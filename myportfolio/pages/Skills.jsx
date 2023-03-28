@@ -73,6 +73,17 @@ const Skills = () => {
           <p className="text-white font-mono md:mt-2 lg:mt-3">- TailwindComponents</p>
           <p className="text-white font-mono md:mt-2 lg:mt-3">- Next.Js</p>
           <p className="text-white font-mono md:mt-2 lg:mt-3">- MongoDB</p>
+        </div>
+
+        <div className="mt-5">
+          <h4 className="text-white font-mono md:text-xl md: mt-3 lg:text-3xl lg:mt-5">Soft Skills</h4>
+          <p className="text-white font-mono md:mt-2 lg:mt-3">- Time management</p>
+          <p className="text-white font-mono md:mt-2 lg:mt-3">- Communication</p>
+          <p className="text-white font-mono md:mt-2 lg:mt-3">- Teamwork</p>
+          <p className="text-white font-mono md:mt-2 lg:mt-3">- Adaptability</p>
+          <p className="text-white font-mono md:mt-2 lg:mt-3">- Organization</p>
+
+
 
         </div>
       </div>

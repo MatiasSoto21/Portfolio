@@ -22,7 +22,7 @@ const Aboutme = () => {
             <div className='ml-20 text-white mt-8 md:ml-48 lg:ml-72'>
                 <div className='flex flex-row justify-center'>
 
-                    <h1 className='font-mono text-lg md:text-4xl lg:text-6xl'>About Me 🧉</h1> <Image className='w-[35px] h-[25px] md:w-[50px] md:h-[40px] lg:w-[80px] lg:h-[60px]' src={arg} alt="ArgFlag" width={100} /> <p className='font-mono mt-2 text-base md:text-2xl lg:text-4xl lg:mt-4'>⭐</p> <p className='font-mono text-lg md:text-4xl lg:text-6xl'>⭐</p> <p className='font-mono mt-2 text-base md:text-2xl lg:text-4xl lg:mt-4'>⭐</p>
+                    <h1 className='font-mono text-lg md:text-4xl lg:text-6xl'>About Me 🧉</h1> <Image priority className='w-[35px] h-[25px] md:w-[50px] md:h-[40px] lg:w-[80px] lg:h-[60px]' src={arg} alt="ArgFlag" width={100} /> <p className='font-mono mt-1 text-base md:text-2xl lg:text-4xl lg:mt-4'>⭐</p> <p className='font-mono text-xl md:text-4xl lg:text-6xl'>⭐</p> <p className='font-mono mt-1 text-base md:text-2xl lg:text-4xl lg:mt-4'>⭐</p>
                 </div>
                 <p className='font-mono mt-4 text-xs font-medium text-center px-5 md:text-base lg:text-lg lg:mt-10 max-w-5xl mx-auto'>I'm from Argentina and I'm 22 years old, At the beginning of 2022 I decided to start my path to become a Web Developer. While and before that, I spent a lot of time being a professional smite player and dancing as a hobby. Here I leave you some images as a fun fact about me.</p>
             </div>

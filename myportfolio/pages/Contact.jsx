@@ -16,7 +16,27 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    if (inputname.current.value.length > 0 && inputmail.current.value.length > 0 && inputmessage.current.value.length > 0) {
+    console.log(inputname.current.value.length);
+
+    if (inputname.current.value.length == 0) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Please write your name!',
+      })
+    } else if (inputmail.current.value.length == 0) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Please write your email!',
+      })
+    } else if (inputmessage.current.value.length == 0) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Please write your message!',
+      })
+    } else {
 
       emailjs.sendForm('service_3jcphxc', 'template_o1si5n9', form.current, 'atwDnmKut-t4_4MyT')
       form.current.reset();
@@ -26,7 +46,7 @@ const Contact = () => {
         icon: 'success',
         title: 'Message Sent!',
         showConfirmButton: false,
-        timer: 3000,
+        timer: 5000,
         timerProgressBar: true,
       })
     }
