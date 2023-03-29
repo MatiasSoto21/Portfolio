@@ -55,6 +55,7 @@ const Contact = () => {
   return (
     <div className='bg-cyan-900 flex flex-col min-h-screen'>
       <Head>
+        <link rel="shortcut icon" href="https://i.postimg.cc/6Q7C5GDp/MS-1.png" />
         <title>Matias Soto Portfolio</title>
       </Head>
       <Sidebar></Sidebar>

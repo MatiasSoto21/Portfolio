@@ -5,17 +5,20 @@ import pokefind from '../public/Pokefind.png'
 import consolegame from '../public/console.png'
 import Image from 'next/image'
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
+import styles from './modulecss/Index.module.css'
+
 
 const Proyects = () => {
   return (
     <div className='bg-cyan-900 flex flex-row min-h-screen'>
       <Head>
         <title>Matias Soto Portfolio</title>
+        <link rel="shortcut icon" href="https://i.postimg.cc/6Q7C5GDp/MS-1.png" />
       </Head>
       <Sidebar></Sidebar>
-      <section className="mt-1 ml-20 md:mx-20 md:mt-8 md:ml-52 lg:mx-40 lg:mt-20 lg:ml-72">
+      <section className="mt-1 ml-20 md:mx-20 md:mt-8 md:ml-52 lg:mx-40 lg:mt-20 lg:ml-80">
         <div>
-          <h1 className='mt-2 ml-3 text-white text-xl font-mono md:text-4xl lg:text-6xl'>Lastest Proyects</h1>
+          <h1 id={styles.title} className='mt-2 ml-3 text-teal-200 text-xl font-mono md:text-4xl lg:text-6xl'>Lastest Proyects</h1>
 
           <section className='flex flex-col md:flex-row lg:flex-row'>
             <div className='flex flex-col mx-2 mb-4 shadow-2xl shadow-black rounded-2xl md:mt-10 md:px-2  bg-cyan-800 hover:scale-105 duration-300'>
