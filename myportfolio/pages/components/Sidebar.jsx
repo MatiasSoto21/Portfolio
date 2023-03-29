@@ -3,7 +3,7 @@ import React from 'react'
 
 const Sidebar = () => {
     return (
-        <div className='fixed'>
+        <div className='z-50 fixed'>
             <nav className="flex flex-col bg-zinc-900 w-20 h-screen px-1 tex-gray-900 border border-gray-700 md:w-48 md:px-4 lg:w-64 lg:px-4">  {/* w-64 */}
                 <div className="flex flex-wrap mt-8 justify-center">
                     <div className="flex justify-center w-full mb-4 ">

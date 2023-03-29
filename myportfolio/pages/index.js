@@ -21,7 +21,7 @@ export default function Home() {
           animate={{ x: 0 }}
         >Hi! I'm Matias Soto</motion.h1>
         <br></br>
-        <motion.div initial={{ scale:0, opacity: 0 }} animate={{ scale: 1, opacity: 1}} transition={{ duration: 1 }}>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ delay:0.5, duration: 2 }}>
           <p className="text-slate-200 font-mono text-base md:text-xl lg:text-2xl">Welcome to my Portfolio</p>
           <br></br>
           <p className="text-slate-300 font-mono text-xs md:text-lg lg:text-lg">Im a full stack developer, dedicated, disciplined with a lot of enthusiasm to continue learning new things.</p>
@@ -45,7 +45,9 @@ export default function Home() {
         </motion.div>
 
 
-        <div className='text-xl flex justify-center gap-8 my-8 text-white'>
+        <motion.div className='text-xl flex justify-center gap-8 my-8 text-white'
+        
+        >
           <a rel="noreferrer" href='https://github.com/MatiasSoto21/' target="_blank">
             <AiFillGithub className='text-2xl md:text-3xl lg:text-4xl hover:scale-150 duration-100 hover:text-cyan-400'></AiFillGithub>
           </a>
@@ -57,7 +59,7 @@ export default function Home() {
 
             <AiFillLinkedin className='text-2xl md:text-3xl lg:text-4xl hover:scale-150 duration-100 hover:text-cyan-400'></AiFillLinkedin>
           </a>
-        </div>
+        </motion.div>
       </div>
     </div>
   )
