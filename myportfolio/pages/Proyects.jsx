@@ -7,8 +7,12 @@ import Image from "next/image";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 import styles from "./modulecss/Index.module.css";
 import "animate.css";
-
+import { useRouter } from 'next/router'
 const Proyects = () => {
+
+  const ruta = useRouter();
+  console.log(ruta.pathname, "ruta");
+
   return (
     <div className="bg-cyan-900 flex flex-row min-h-screen">
       <Head>

@@ -1,7 +1,12 @@
 import Link from "next/link";
 import React from "react";
+import { useRouter } from 'next/router'
 
 const Sidebar = () => {
+
+  const ruta = useRouter();
+  const hover = "mb-2 py-3 my-4 text-gray-100 flex flex-col justify-center items-center md:flex-row lg:flex-row md:justify-start lg:justify-start  border-gray-300 hover:text-black   hover:bg-gray-300  hover:font-bold  rounded-lg md:px-4 lg:px-4 md:py-4 lg:py-4"
+  const pintado = "mb-2 py-3 my-4 text-gray-100 flex flex-col justify-center items-center md:flex-row lg:flex-row md:justify-start lg:justify-start  border-gray-300 text-black bg-gray-300 font-bold  rounded-lg md:px-4 lg:px-4 md:py-4 lg:py-4"
   return (
     <div className="z-50 fixed">
       <nav className="flex flex-col bg-zinc-900 w-20 h-screen px-1 tex-gray-900 border border-gray-700 md:w-48 md:px-4 lg:w-64 lg:px-4">
@@ -24,7 +29,7 @@ const Sidebar = () => {
         <div className=" mb-4 md:mt-8 lg:mt-10">
           <ul className="md:ml-2 lg:ml-4">
             <Link href="/">
-              <li className="mb-2 py-3 my-4 text-gray-100 flex flex-col justify-center items-center md:flex-row lg:flex-row md:justify-start lg:justify-start  border-gray-300 hover:text-black   hover:bg-gray-300  hover:font-bold  rounded-lg md:px-4 lg:px-4 md:py-4 lg:py-4">
+              <li className={ruta.pathname == "/" ? pintado : hover}>
                 <span>
                   <svg className="fill-current h-5 w-5 " viewBox="0 0 24 24">
                     <path
@@ -40,7 +45,7 @@ const Sidebar = () => {
               </li>
             </Link>
             <Link href="/Aboutme">
-              <li className="mb-2 py-3 my-4 text-gray-100 flex flex-col justify-center items-center md:flex-row lg:flex-row md:justify-start lg:justify-start border-gray-300 hover:text-black   hover:bg-gray-300  hover:font-bold  rounded-lg md:px-4 lg:px-4 md:py-4 lg:py-4">
+              <li className={ruta.pathname == "/Aboutme" ? pintado : hover}>
                 <span>
                   <svg
                     className="fill-current h-5 w-5 "
@@ -67,7 +72,7 @@ const Sidebar = () => {
               </li>
             </Link>
             <Link href="/Proyects">
-              <li className="mb-2 py-3 my-4 text-gray-100 flex flex-col justify-center items-center md:flex-row lg:flex-row md:justify-start lg:justify-start  border-gray-300 hover:text-black   hover:bg-gray-300  hover:font-bold  rounded-lg md:px-4 lg:px-4 md:py-4 lg:py-4">
+              <li className={ruta.pathname == "/Proyects" ? pintado : hover}>
                 <span>
                   <svg className="fill-current h-5 w-5 " viewBox="0 0 20 18">
                     <path
@@ -95,7 +100,7 @@ const Sidebar = () => {
                             </li>
                         </Link> */}
             <Link href="/Skills">
-              <li className="py-3 my-4 text-gray-100 flex flex-col justify-center items-center md:flex-row lg:flex-row md:justify-start lg:justify-start border-gray-300 hover:text-black   hover:bg-gray-300  hover:font-bold  rounded-lg md:px-4 lg:px-4 lg:mb-2 md:py-4 lg:py-4">
+              <li className={ruta.pathname == "/Skills" ? pintado : hover}>
                 <span>
                   <svg className="fill-current h-5 w-5 " viewBox="0 0 24 24">
                     <path
@@ -111,7 +116,7 @@ const Sidebar = () => {
               </li>
             </Link>
             <Link href="/Contact">
-              <li className="py-3 my-4 text-gray-100 flex flex-col justify-center items-center md:flex-row lg:flex-row md:justify-start lg:justify-start border-gray-300 hover:text-black   hover:bg-gray-300  hover:font-bold  rounded-lg md:px-4 lg:px-4 lg:mb-2 md:py-4 lg:py-4">
+              <li className={ruta.pathname == "/Contact" ? pintado : hover}>
                 <span>
                   <svg
                     className="fill-current h-5 w-5 "
