@@ -4,6 +4,7 @@ import Head from "next/head";
 import styles from "./modulecss/Index.module.css";
 import "animate.css";
 import AppContext from "./components/AppContext";
+import SvgComputer from "./components/SvgComputer";
 
 const Skills = () => {
   const context = useContext(AppContext);
@@ -19,6 +20,9 @@ const Skills = () => {
       </Head>
       <Sidebar></Sidebar>
       <section className="animate__animated animate__fadeInDown animate__faster">
+        <div className="flex flex-row">
+
+        
         <div className="flex flex-col ml-[90px] mr-2 md:mt-8 md:ml-52  lg:mt-20 lg:ml-80">
           <h1
             id={styles.title}
@@ -144,6 +148,10 @@ const Skills = () => {
               {!context.idioma ? "- Organization" : "- Organización"}
             </p>
           </div>
+          </div>
+{/*           <div className="w-[400px] mt-72 ml-72">
+        <SvgComputer></SvgComputer>
+          </div> */}
         </div>
       </section>
     </div>
