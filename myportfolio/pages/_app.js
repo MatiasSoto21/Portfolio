@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 import { useState } from "react";
-import AppContext from "./components/AppContext"
+import AppContext from "../utils/AppContext.js"
 
 export default function App({ Component, pageProps }) {
   const [idioma, setIdioma] = useState(false);

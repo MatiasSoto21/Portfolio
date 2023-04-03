@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useContext } from "react";
 import { useRouter } from "next/router";
-import AppContext from "./AppContext"
+import AppContext from "../../utils/AppContext"
 
 const Sidebar = () => {
 

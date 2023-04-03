@@ -3,7 +3,7 @@ import Sidebar from "./components/Sidebar";
 import Head from "next/head";
 import styles from "./modulecss/Index.module.css";
 import "animate.css";
-import AppContext from "./components/AppContext";
+import AppContext from "../utils/AppContext";
 import SvgComputer from "./components/SvgComputer";
 
 const Skills = () => {

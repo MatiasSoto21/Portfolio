@@ -6,7 +6,7 @@ import { AiOutlineInstagram, AiFillFacebook } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
 import Swal from "sweetalert2";
 import "animate.css";
-import AppContext from "./components/AppContext";
+import AppContext from "../utils/AppContext";
 import styles from "./modulecss/Index.module.css";
 
 

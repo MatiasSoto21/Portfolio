@@ -11,7 +11,7 @@ import arg from "../public/arg.png";
 import { motion } from "framer-motion";
 import "animate.css";
 
-import AppContext from "./components/AppContext";
+import AppContext from "../utils/AppContext";
 
 const Aboutme = () => {
   const context = useContext(AppContext);

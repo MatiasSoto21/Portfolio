@@ -7,7 +7,7 @@ import Image from "next/image";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 import styles from "./modulecss/Index.module.css";
 import "animate.css";
-import AppContext from "./components/AppContext";
+import AppContext from "../utils/AppContext";
 
 const Proyects = () => {
   const context = useContext(AppContext);

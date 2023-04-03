@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import ingles from "../public/ingless.png";
 import españa from "../public/españa.png";
 import Image from "next/image";
-import AppContext from "./components/AppContext";
+import AppContext from "../utils/AppContext";
 
 export default function Home() {
   
