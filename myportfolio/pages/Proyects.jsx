@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Sidebar from "./components/Sidebar";
 import Head from "next/head";
 import pokefind from "../public/Pokefind.png";
@@ -7,14 +7,13 @@ import Image from "next/image";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 import styles from "./modulecss/Index.module.css";
 import "animate.css";
-import { useRouter } from 'next/router'
-const Proyects = () => {
+import AppContext from "./components/AppContext";
 
-  const ruta = useRouter();
-  console.log(ruta.pathname, "ruta");
+const Proyects = () => {
+  const context = useContext(AppContext);
 
   return (
-    <div className="bg-cyan-900 flex flex-row min-h-screen">
+    <div id={styles.background} className="bg-cyan-900 flex flex-row min-h-screen">
       <Head>
         <title>Matias Soto Portfolio</title>
         <link
@@ -28,7 +27,7 @@ const Proyects = () => {
           id={styles.title}
           className="mt-2 ml-3 text-teal-200 text-xl font-mono md:text-4xl lg:text-6xl"
         >
-          Lastest Proyects
+          {!context.idioma ? "Lastest Proyects" : "Últimos Proyectos"}
         </h1>
 
         <section className="flex flex-col md:flex-row lg:flex-row lg: lg:justify-center">
@@ -47,9 +46,13 @@ const Proyects = () => {
                 Wiki Web App
               </p>
               <p className="text-xs py-2 max-w-xs mx-auto md:text-base md:font-normal lg:text-lg lg:font-medium">
-                •Search-Filtering-Ordering-Creation.
+                {!context.idioma
+                  ? "•Search-Filtering-Ordering-Creation."
+                  : "•Búsqueda-Filtros-Orden-Creación."}
               </p>
-              <h4 className="-mt-1 mb-2">Made with</h4>
+              <h4 className="-mt-1 mb-2">
+                {!context.idioma ? "Made with" : "Hecho con"}
+              </h4>
             </div>
             <div className="-mt-4 flex flex-wrap justify-center">
               <img
@@ -112,9 +115,13 @@ const Proyects = () => {
                 E-commerce Android App
               </p>
               <p className="text-xs py-2 max-w-xs mx-auto md:text-base md:font-normal lg:text-lg lg:font-medium">
-                •Auth0-Shopping cart-Notifications-etc.
+                {!context.idioma
+                  ? "•Auth0-Shopping cart-Notifications-etc."
+                  : "•Auth0-Carrito de compras-Notificaciones-etc."}
               </p>
-              <h4 className="-mt-1 mb-2">Made with</h4>
+              <h4 className="-mt-1 mb-2">
+                {!context.idioma ? "Made with" : "Hecho con"}
+              </h4>
             </div>
             <div className="-mt-4 flex flex-wrap justify-center">
               <img

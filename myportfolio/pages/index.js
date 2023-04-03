@@ -1,15 +1,22 @@
 import Head from "next/head";
+import { useContext } from "react";
 import { Inter } from "next/font/google";
 import Sidebar from "./components/Sidebar";
 import { AiFillGithub, AiFillLinkedin, AiFillInstagram } from "react-icons/ai";
 import styles from "./modulecss/Index.module.css";
 import { motion } from "framer-motion";
-
-const inter = Inter({ subsets: ["latin"] });
+import ingles from "../public/ingless.png";
+import españa from "../public/españa.png";
+import Image from "next/image";
+import AppContext from "./components/AppContext";
 
 export default function Home() {
+  
+
+  const context = useContext(AppContext);
+
   return (
-    <div className="bg-cyan-900 flex flex-row min-h-screen">
+    <div id={styles.background} className="bg-cyan-900 flex flex-row min-h-screen">
       <Head>
         <title>Matias Soto Portfolio</title>
         <link
@@ -18,14 +25,44 @@ export default function Home() {
         />
       </Head>
       <Sidebar></Sidebar>
-      <div className="flex flex-col ml-24 mx-8 mt-8 md:ml-52 md:mt-20 lg:ml-80 lg:mt-40">
+      <div className="flex flex-col ml-24 mx-8 mt-8 md:ml-52 md:mt-20 lg:ml-80 lg:mt-40 lg:max-w-[1200px]">
+        <div className="text-white flex justify-end items-start text-sm lg:text-xl lg:w-full">
+          <button
+            className={
+              context.idioma
+                ? "border rounded p-[1px] border-gray-300 flex items-center"
+                : "flex items-center"
+            }
+            onClick={() => {
+              if (!context.idioma) {
+                context.setIdioma(!context.idioma);
+              }
+            }}
+          >
+            ES <Image src={españa} width={30} />
+          </button>
+          <span>&nbsp;|&nbsp;</span>
+          <button
+            className={
+              !context.idioma
+                ? "border rounded p-[1px] border-gray-300 flex items-center"
+                : "flex items-center"
+            }
+            onClick={() => {
+              if (context.idioma) context.setIdioma(!context.idioma);
+            }}
+          >
+            EN <Image src={ingles} width={30} />
+          </button>
+        </div>
+
         <motion.h1
           id={styles.title}
           className="drop-shadow-xs text-teal-200 font-mono text-2xl md:text-4xl lg:text-7xl"
           initial={{ x: "100vw" }}
           animate={{ x: 0 }}
         >
-          Hi! I'm Matias Soto
+          {!context.idioma ? "Hi! I'm Matias Soto" : "Hola! Soy Matias Soto"}
         </motion.h1>
         <br></br>
         <motion.div
@@ -34,23 +71,28 @@ export default function Home() {
           transition={{ delay: 0.5, duration: 2 }}
         >
           <p className="text-slate-200 font-mono text-base md:text-xl lg:text-2xl">
-            Welcome to my Portfolio
+            {!context.idioma
+              ? "Welcome to my Portfolio"
+              : "Bienvenido a mi Portfolio"}
           </p>
           <br></br>
           <p className="text-slate-300 font-mono text-xs md:text-lg lg:text-lg">
-            Im a full stack developer, dedicated, disciplined with a lot of
-            enthusiasm to continue learning new things.
+            {!context.idioma
+              ? "I'm on my way to be a full stack developer, dedicated, disciplined with a lot of enthusiasm to continue learning new things."
+              : "Estoy en camino a ser en un desarrollador full stack ,dedicado, disciplinado y con mucho entusiasmo por seguir aprendiendo cosas nuevas."}
           </p>
           <br></br>
-          {/* <div className='flex'> */}
+
           <p className="text-slate-300 font-mono text-xs md:text-lg lg:text-lg">
-            If you want to get in touch with me feel free to write to{" "}
+            {!context.idioma
+              ? "If you want to get in touch with me feel free to write to "
+              : "Si queres ponerte en contacto conmigo sensite libre de escribir a "}
             <span className="underline text-cyan-300 font-mono text-xs md:text-lg lg:text-lg">
               matias2015fernando@gmail.com
             </span>
           </p>
         </motion.div>
-        {/* </div> */}
+
         <motion.div
           initial={{ y: "100vh" }}
           animate={{ y: 0 }}
@@ -62,7 +104,7 @@ export default function Home() {
             target="_blank"
           >
             <button className=" drop-shadow-md shadow-md shadow-cyan-300 mt-6 py-1 px-3 md:py-2 md:px-4 lg:py-2 lg:px-4 bg-teal-600 text-slate-100 font-semibold border border-teal-600 rounded hover:bg-cyan-600 hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0">
-              Download my Resume
+              {!context.idioma ? "Download my Resume" : "Descargar CV"}
             </button>
           </a>
         </motion.div>

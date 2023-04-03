@@ -1,17 +1,20 @@
 import Link from "next/link";
-import React from "react";
-import { useRouter } from 'next/router'
+import React, { useContext } from "react";
+import { useRouter } from "next/router";
+import AppContext from "../components/AppContext"
 
 const Sidebar = () => {
 
+  const context = useContext(AppContext);
+
   const ruta = useRouter();
-  const hover = "mb-2 py-3 my-4 text-gray-100 flex flex-col justify-center items-center md:flex-row lg:flex-row md:justify-start lg:justify-start  border-gray-300 hover:text-black   hover:bg-gray-300  hover:font-bold  rounded-lg md:px-4 lg:px-4 md:py-4 lg:py-4"
-  const pintado = "mb-2 py-3 my-4 text-gray-100 flex flex-col justify-center items-center md:flex-row lg:flex-row md:justify-start lg:justify-start  border-gray-300 text-black bg-gray-300 font-bold  rounded-lg md:px-4 lg:px-4 md:py-4 lg:py-4"
+  const hover =
+    "mb-2 py-3 my-4 text-gray-100 flex flex-col justify-center items-center md:flex-row lg:flex-row md:justify-start lg:justify-start  border-gray-300 hover:text-black   hover:bg-gray-300  hover:font-bold  rounded-lg md:px-4 lg:px-4 md:py-4 lg:py-4";
+  const pintado =
+    "mb-2 py-3 my-4 text-black flex flex-col justify-center items-center md:flex-row lg:flex-row md:justify-start lg:justify-start  border-gray-300 bg-gray-300 font-bold  rounded-lg md:px-4 lg:px-4 md:py-4 lg:py-4";
   return (
     <div className="z-50 fixed">
       <nav className="flex flex-col bg-zinc-900 w-20 h-screen px-1 tex-gray-900 border border-gray-700 md:w-48 md:px-4 lg:w-64 lg:px-4">
-        {" "}
-        {/* w-64 */}
         <div className="flex flex-wrap mt-8 justify-center">
           <div className="flex justify-center w-full mb-4 ">
             <span className="font-semibold text-xs md:text-base lg:text-xl text-white ">
@@ -67,7 +70,7 @@ const Sidebar = () => {
                 </span>
 
                 <span className="text-sm md:ml-2 lg:ml-2 lg:text-base md:block lg:block">
-                  About Me
+                  {!context.idioma ? "About Me" : "Sobre mí"}
                 </span>
               </li>
             </Link>
@@ -83,7 +86,7 @@ const Sidebar = () => {
                 </span>
 
                 <span className="text-sm md:ml-2 lg:ml-2 lg:text-base md:block lg:block">
-                  Proyects
+                  {!context.idioma ? "Proyects" : "Proyectos"}
                 </span>
               </li>
             </Link>
@@ -111,7 +114,7 @@ const Sidebar = () => {
                   </svg>
                 </span>
                 <span className="text-sm md:ml-2 lg:ml-2 lg:text-base md:block lg:block">
-                  Skills
+                  {!context.idioma ? "Skills" : "Habilidades"}
                 </span>
               </li>
             </Link>
@@ -133,7 +136,7 @@ const Sidebar = () => {
                   </svg>
                 </span>
                 <span className="text-sm md:ml-2 lg:ml-2 lg:text-base md:block lg:block">
-                  Contact
+                {!context.idioma ? "Contact" : "Contacto"}
                 </span>
               </li>
             </Link>

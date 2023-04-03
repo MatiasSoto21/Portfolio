@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useContext } from "react";
 import emailjs from "@emailjs/browser";
 import Sidebar from "./components/Sidebar";
 import Head from "next/head";
@@ -6,12 +6,16 @@ import { AiOutlineInstagram, AiFillFacebook } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
 import Swal from "sweetalert2";
 import "animate.css";
+import AppContext from "./components/AppContext";
+import styles from "./modulecss/Index.module.css";
+
 
 const Contact = () => {
   const form = useRef();
   const inputname = useRef();
   const inputmail = useRef();
   const inputmessage = useRef();
+  const context = useContext(AppContext);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -22,19 +26,19 @@ const Contact = () => {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Please write your name!",
+        text: !context.idioma? "Please write your name!" : "¡Porfavor escribí tu nombre!",
       });
     } else if (inputmail.current.value.length == 0) {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Please write your email!",
+        text: !context.idioma? "Please write your email!" : "¡Porfavor escribí tu email!",
       });
     } else if (inputmessage.current.value.length == 0) {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Please write your message!",
+        text: !context.idioma? "Please write your message!" : "¡Porfavor escribí tu mensaje!",
       });
     } else {
       emailjs.sendForm(
@@ -57,7 +61,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-cyan-900 flex flex-col min-h-screen">
+    <div id={styles.background} className="bg-cyan-900 flex flex-col min-h-screen">
       <Head>
         <link
           rel="shortcut icon"
@@ -70,7 +74,7 @@ const Contact = () => {
         <div className="ml-20 mt-4 md:mt-8 md:ml-52  lg:mt-40 lg:ml-72">
           <div className="flex flex-row justify-center">
             <h1 className="text-white text-2xl font-mono md:text-4xl lg:text-6xl">
-              Contact Me!
+              {!context.idioma ? "Contact Me!" : "Contáctame"}
             </h1>
           </div>
 
@@ -79,41 +83,41 @@ const Contact = () => {
               <form ref={form} onSubmit={sendEmail}>
                 <div className="mb-5">
                   <label className="mb-3 block text-base font-medium text-cyan-400">
-                    Your Name
+                  {!context.idioma ? "Your Name" : "Tu Nombre"}
                   </label>
                   <input
                     ref={inputname}
                     type="text"
                     name="user_name"
                     id="name"
-                    placeholder="Your Name"
+                    placeholder={!context.idioma ? "Your Name" : "Tu Nombre"}
                     className="w-full rounded-md border-2 border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-cyan-500 focus:shadow-md"
                   />
                 </div>
                 <div className="mb-5">
                   <label className="mb-3 block text-base font-medium text-cyan-400">
-                    Email Address
+                  {!context.idioma ? "Email Address" : "Email"}
                   </label>
                   <input
                     ref={inputmail}
                     type="email"
                     name="user_email"
                     id="email"
-                    placeholder="your@email.com"
+                    placeholder={!context.idioma ? "your@email.com" : "tu@email.com"}
                     className="w-full rounded-md border-2 border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-cyan-500 focus:shadow-md"
                   />
                 </div>
 
                 <div className="mb-5">
                   <label className="mb-3 block text-base font-medium text-cyan-400">
-                    Message
+                  {!context.idioma ? "Message" : "Mensaje"}
                   </label>
                   <textarea
                     ref={inputmessage}
                     rows="4"
                     name="message"
                     id="message"
-                    placeholder="Type your message"
+                    placeholder={!context.idioma ? "Type your message" : "Escribí tu mensaje"}
                     className="w-full resize-none rounded-md border-2 border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-cyan-500 focus:shadow-md"
                   ></textarea>
                 </div>
@@ -121,7 +125,7 @@ const Contact = () => {
                   <input
                     className="hover:shadow-form hover:bg-cyan-500 hover:cursor-pointer rounded-md bg-cyan-600 py-3 px-8 text-base font-semibold text-white outline-none lg:text-xl "
                     type="submit"
-                    value="Send"
+                    value={!context.idioma ? "Send" : "Enviar"}
                   />
                 </div>
               </form>

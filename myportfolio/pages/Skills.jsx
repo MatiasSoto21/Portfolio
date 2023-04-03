@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import Sidebar from "./components/Sidebar";
 import Head from "next/head";
 import styles from "./modulecss/Index.module.css";
 import "animate.css";
+import AppContext from "./components/AppContext";
 
 const Skills = () => {
+  const context = useContext(AppContext);
+
   return (
-    <div className="bg-cyan-900 flex flex-row min-h-screen">
+    <div id={styles.background} className="bg-cyan-900 flex flex-row min-h-screen">
       <Head>
         <link
           rel="shortcut icon"
@@ -21,12 +24,14 @@ const Skills = () => {
             id={styles.title}
             className="mt-2 text-teal-200 text-2xl font-mono md:text-4xl lg:text-6xl"
           >
-            My Skill Set
+            {!context.idioma ? "My Skill Set" : "Mis Habilidades"}
           </h1>
           <br></br>
           <div className="bg-cyan-700 rounded-lg pb-2 px-2 md:pb-4 md:pr-12 md:pl-4 lg:pb-6 lg:mt-4">
             <h2 className="text-white font-mono md:mt-3 md:text-xl lg:mt-4 lg:text-3xl">
-              Programming Languages
+              {!context.idioma
+                ? "Programming Languages"
+                : "Lenguajes de Programación"}
             </h2>
             <div className="flex flex-wrap">
               <img
@@ -52,7 +57,9 @@ const Skills = () => {
 
           <div className="bg-cyan-700 mt-4 rounded-lg pb-2 px-2 md:pb-4 md:pr-12 md:pl-4 lg:pb-6 lg:mt-4">
             <h3 className="text-white font-mono md:text-xl md:mt-3 lg:text-3xl lg:mt-5">
-              Frameworks and Libraries
+              {!context.idioma
+                ? "Frameworks and Libraries"
+                : "Frameworks y Librerías"}
             </h3>
 
             <div className="flex flex-wrap">
@@ -104,10 +111,10 @@ const Skills = () => {
           </div>
           <div className="mt-5 bg-cyan-700 rounded-lg pb-2 px-2 md:pb-4 md:pr-12 md:pl-4 lg:pb-6 lg:mt-4">
             <h4 className="text-white font-mono md:text-xl md: mt-3 lg:text-3xl lg:mt-5">
-              Current Learning
+              {!context.idioma ? "Current Learning" : "Estoy Aprendiendo"}
             </h4>
             <p className="text-white font-mono md:mt-2 lg:mt-3 lg:text-lg">
-              - TailwindComponents
+              - FramerMotion
             </p>
             <p className="text-white font-mono md:mt-2 lg:mt-3 lg:text-lg">
               - Next.Js
@@ -119,22 +126,22 @@ const Skills = () => {
 
           <div className="mt-5 mb-5 bg-cyan-700 rounded-lg pb-2 px-2 md:pb-4 md:pr-12 md:pl-4 lg:pb-6 lg:mt-4 lg:pr-72">
             <h4 className="text-white font-mono md:text-xl md: mt-3 lg:text-3xl lg:mt-5">
-              Soft Skills
+              {!context.idioma ? "Soft Skills" : "Habilidades Blandas"}
             </h4>
             <p className="text-white font-mono md:mt-2 lg:mt-3 lg:text-lg">
-              - Time management
+              {!context.idioma ? "- Time management" : "- Gestión del tiempo"}
             </p>
             <p className="text-white font-mono md:mt-2 lg:mt-3 lg:text-lg">
-              - Communication
+              {!context.idioma ? "- Communication" : "- Comunicación"}
             </p>
             <p className="text-white font-mono md:mt-2 lg:mt-3 lg:text-lg">
-              - Teamwork
+              {!context.idioma ? "- Teamwork" : "- Trabajo en Equipo"}
             </p>
             <p className="text-white font-mono md:mt-2 lg:mt-3 lg:text-lg">
-              - Adaptability
+              {!context.idioma ? "- Adaptability" : "- Adaptabilidad"}
             </p>
             <p className="text-white font-mono md:mt-2 lg:mt-3 lg:text-lg">
-              - Organization
+              {!context.idioma ? "- Organization" : "- Organización"}
             </p>
           </div>
         </div>

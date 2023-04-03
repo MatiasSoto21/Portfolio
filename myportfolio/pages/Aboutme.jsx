@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Sidebar from "./components/Sidebar";
 import Head from "next/head";
 import Image from "next/image";
@@ -11,9 +11,13 @@ import arg from "../public/arg.png";
 import { motion } from "framer-motion";
 import "animate.css";
 
+import AppContext from "./components/AppContext";
+
 const Aboutme = () => {
+  const context = useContext(AppContext);
+
   return (
-    <div className="bg-cyan-900 flex flex-col min-h-screen">
+    <div id={styles.background} className="bg-cyan-900 flex flex-col min-h-screen">
       <Head>
         <link
           rel="shortcut icon"
@@ -29,7 +33,8 @@ const Aboutme = () => {
               id={styles.title}
               className="font-mono text-teal-200 text-lg md:text-4xl lg:text-6xl"
             >
-              About Me
+              {" "}
+              {context.idioma ? "Sobre mi" : "About Me"}
             </h1>
             <span className="font-mono   text-lg md:text-4xl lg:text-6xl">
               🧉
@@ -64,11 +69,9 @@ const Aboutme = () => {
             </motion.p>
           </div>
           <p className="font-mono mt-4 text-xs font-medium text-center px-5 md:text-base lg:text-lg lg:mt-10 max-w-5xl mx-auto">
-            I'm from Argentina and I'm 22 years old, At the beginning of 2022 I
-            decided to start my path to become a Web Developer. While and before
-            that, I spent a lot of time being a professional smite player and
-            dancing as a hobby. Here I leave you some images as a fun fact about
-            me.
+            {!context.idioma
+              ? "I'm from Argentina and I'm 22 years old, At the beginning of 2022 I decided to start my path to become a Web Developer. While and before that, I spent a lot of time being a professional smite player and dancing as a hobby. Here I leave you some images as a fun fact about me."
+              : "Soy de Argentina y tengo 22 años, a principios del 2022 decidí empezar mi camino para ser un desarrollador web. Mientras y antes de eso, pasé mucho tiempo siendo un jugador profesional de smite y bailando como hobby. Acá te dejo algunas imagenes como dato curioso."}
           </p>
         </div>
         <div className="flex justify-center">
@@ -184,7 +187,11 @@ const Aboutme = () => {
         </div>
         <div className="ml-20 mt-4 flex justify-center text-white md:ml-48 lg:-mt-20 lg:mb-20">
           <h1 className="font-mono font-medium text-sm md:text-lg lg:text-3xl">
-            I love Art and Videogames too! :){" "}
+            {!context.idioma?
+"I love Art and Videogames too! :)"
+:
+"¡También me encanta el arte y los videojuegos! :)"
+            }
           </h1>
         </div>
       </div>

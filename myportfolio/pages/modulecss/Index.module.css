@@ -1,3 +1,13 @@
-#title{
-    text-shadow: 0px 0px 5px #00FFFF;
+#title {
+  text-shadow: 0px 0px 5px #00ffff;
+}
+
+#background {
+    background: rgb(5,42,56);
+background: linear-gradient(90deg, rgba(5,42,56,1) 0%, rgba(22,78,99,1) 50%, rgba(5,42,56,1) 100%);
+}
+
+#backgroud {
+    background: rgb(22,78,99);
+background: linear-gradient(90deg, rgba(22,78,99,1) 0%, rgba(5,42,56,1) 50%, rgba(22,78,99,1) 100%);
 }
