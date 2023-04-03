@@ -149,9 +149,9 @@ const Skills = () => {
             </p>
           </div>
           </div>
-{/*           <div className="w-[400px] mt-72 ml-72">
+          <div className="hidden md:w-[200px] md:flex md:ml-10 lg:mt-50 lg:ml-60 lg:flex lg:w-[400px]">
         <SvgComputer></SvgComputer>
-          </div> */}
+          </div>
         </div>
       </section>
     </div>

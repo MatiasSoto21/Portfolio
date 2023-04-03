@@ -39,7 +39,7 @@ export default function Home() {
               }
             }}
           >
-            ES <Image src={españa} width={30} />
+            ES <Image priority src={españa} alt="Esp" width={30} />
           </button>
           <span>&nbsp;|&nbsp;</span>
           <button
@@ -52,7 +52,7 @@ export default function Home() {
               if (context.idioma) context.setIdioma(!context.idioma);
             }}
           >
-            EN <Image src={ingles} width={30} />
+            EN <Image priority src={ingles} alt="Eng" width={30} />
           </button>
         </div>
 
