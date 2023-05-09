@@ -79,14 +79,14 @@ export default function Home() {
           <p className="text-slate-300 font-mono text-xs md:text-lg lg:text-lg">
             {!context.idioma
               ? "I'm on my way to be a full stack developer, dedicated, disciplined with a lot of enthusiasm to continue learning new things."
-              : "Estoy en camino a ser en un desarrollador full stack ,dedicado, disciplinado y con mucho entusiasmo por seguir aprendiendo cosas nuevas."}
+              : "Estoy en camino a ser un desarrollador full stack, dedicado, disciplinado y con mucho entusiasmo por seguir aprendiendo cosas nuevas."}
           </p>
           <br></br>
 
           <p className="text-slate-300 font-mono text-xs md:text-lg lg:text-lg">
             {!context.idioma
               ? "If you want to get in touch with me feel free to write to "
-              : "Si queres ponerte en contacto conmigo sensite libre de escribir a "}
+              : "Si queres ponerte en contacto conmigo sentite libre de escribir a "}
             <span className="underline text-cyan-300 font-mono text-xs md:text-lg lg:text-lg">
               matias2015fernando@gmail.com
             </span>

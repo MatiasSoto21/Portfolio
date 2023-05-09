@@ -3,6 +3,7 @@ import Sidebar from "./components/Sidebar";
 import Head from "next/head";
 import pokefind from "../public/Pokefind.png";
 import consolegame from "../public/console.png";
+import tetris from "../public/tetris.png"
 import Image from "next/image";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 import styles from "./modulecss/Index.module.css";
@@ -13,7 +14,10 @@ const Proyects = () => {
   const context = useContext(AppContext);
 
   return (
-    <div id={styles.background} className="bg-cyan-900 flex flex-row min-h-screen">
+    <div
+      id={styles.background}
+      className="bg-cyan-900 flex flex-row min-h-screen"
+    >
       <Head>
         <title>Matias Soto Portfolio</title>
         <link
@@ -161,6 +165,75 @@ const Proyects = () => {
               <a
                 rel="noreferrer"
                 href="https://drive.google.com/file/d/1iv5c1CzGqt7dRl1hu2f1Js9pdxR31oTX/view"
+                target="_blank"
+                className="hover:text-cyan-300"
+              >
+                <AiOutlineLink className="text-xl md:text-2xl lg:text-4xl"></AiOutlineLink>
+              </a>
+            </div>
+          </div>
+
+          <div className="flex flex-col mx-2 mb-4 shadow-2xl shadow-black rounded-2xl md:mt-10 md:px-2  bg-cyan-800 hover:scale-105 duration-300">
+            <div className="text-white text-center flex flex-col items-center">
+              <h3 className="text-lg font-medium mb-1 md:tex-xl mt-2 lg:text-3xl">
+                Tetris Game
+              </h3>
+              <Image
+                priority
+                src={tetris}
+                alt="TetrisApp"
+                className="w-16 md:w-28 lg:w-72"
+              />
+              <p className="text-xs py-2 max-w-xs mx-auto md:text-base md:font-normal lg:text-lg lg:font-medium">
+                Tetris React App
+              </p>
+              <p className="text-xs py-2 max-w-xs mx-auto md:text-base md:font-normal lg:text-lg lg:font-medium">
+                {!context.idioma
+                  ? "•React Hooks-useState-useEffect-custom hooks"
+                  : "•React Hooks-useState-useEffect-custom hooks"}
+              </p>
+              <h4 className="-mt-1 mb-2">
+                {!context.idioma ? "Made with" : "Hecho con"}
+              </h4>
+            </div>
+            <div className="-mt-4 flex flex-wrap justify-center">
+              <img
+                className="mt-3 md:mt-5 lg:mt-5"
+                src="https://img.shields.io/badge/-Javascript-grey?logo=javascript&logoColor=yellow&style=plastic"
+                alt="javascript"
+                width="92px"
+              />
+              <img
+                className="mt-3 mx-3 md:mt-5 lg:mt-5"
+                src="https://img.shields.io/badge/-HTML-red?logo=html5&logoColor=white&style=plastic"
+                alt="html5"
+                width="65px"
+              />
+              <img
+                className="mt-3 mr-3 md:mt-5 lg:mt-5"
+                src="https://img.shields.io/badge/-TailwindCSS-0ab3bf?logo=tailwindcss&logoColor=white&style=plastic"
+                alt="tailwindcss"
+                width="110px"
+              />
+              <img
+                className="mt-3 md:mt-5 lg:mt-5"
+                src="https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=0064cf&style=plastic"
+                alt="reactjs"
+                width="70px"
+              />
+            </div>
+            <div className="text-xl flex justify-center gap-8 my-2 text-white">
+              <a
+                rel="noreferrer"
+                href="https://github.com/MatiasSoto21/TetrisVite"
+                target="_blank"
+                className="hover:text-cyan-300"
+              >
+                <AiFillGithub className="text-xl md:text-2xl lg:text-4xl"></AiFillGithub>
+              </a>
+              <a
+                rel="noreferrer"
+                href="https://tetris-vite.vercel.app/"
                 target="_blank"
                 className="hover:text-cyan-300"
               >
